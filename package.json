@@ -9,6 +9,26 @@
     "astro": "astro"
   },
   "dependencies": {
+    "@rdm-org-dev/core-hooks": "^1.0.3",
+    "@rdm-org-dev/core-ui-alert": "^1.0.1",
+    "@rdm-org-dev/core-ui-badge": "^1.0.1",
+    "@rdm-org-dev/core-ui-button": "^1.0.2",
+    "@rdm-org-dev/core-ui-card": "^1.0.1",
+    "@rdm-org-dev/core-ui-checkbox": "^1.0.1",
+    "@rdm-org-dev/core-ui-input": "^1.0.1",
+    "@rdm-org-dev/core-ui-modal": "^1.0.1",
+    "@rdm-org-dev/core-ui-radio": "^1.0.1",
+    "@rdm-org-dev/core-ui-select": "^1.0.1",
+    "@rdm-org-dev/core-ui-skeleton": "^1.0.1",
+    "@rdm-org-dev/core-ui-spinner": "^1.0.1",
+    "@rdm-org-dev/core-ui-switch": "^1.0.1",
+    "@rdm-org-dev/core-ui-table": "^1.0.1",
+    "@rdm-org-dev/core-ui-toast": "^1.0.1",
+    "@tailwindcss/vite": "^4.1.16",
     "astro": "^5.15.1"
+  },
+  "devDependencies": {
+    "@astrojs/tailwind": "^6.0.2",
+    "tailwindcss": "^3.4.18"
   }
 }
