@@ -10,7 +10,10 @@
   },
   "dependencies": {
     "@astrojs/react": "^4.4.0",
-    "@rdm-org-dev/core-hooks": "^1.0.3",
+    "@chakra-ui/react": "^2.10.9",
+    "@emotion/react": "^11.14.0",
+    "@emotion/styled": "^11.14.1",
+    "@rdm-org-dev/core-hooks": "^1.0.4",
     "@rdm-org-dev/core-ui-alert": "^1.0.1",
     "@rdm-org-dev/core-ui-badge": "^1.0.1",
     "@rdm-org-dev/core-ui-button": "^1.0.2",
@@ -29,6 +32,7 @@
     "@types/react": "^19.2.2",
     "@types/react-dom": "^19.2.2",
     "astro": "^5.15.1",
+    "framer-motion": "^11.18.2",
     "react": "^19.2.0",
     "react-dom": "^19.2.0"
   },
