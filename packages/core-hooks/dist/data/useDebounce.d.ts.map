@@ -1,0 +1,1 @@
+{"version":3,"file":"useDebounce.d.ts","sourceRoot":"","sources":["../../src/data/useDebounce.ts"],"names":[],"mappings":"AAEA,MAAM,WAAW,kBAAkB;IACjC,KAAK,CAAC,EAAE,MAAM,CAAC;CAChB;AAED,MAAM,WAAW,iBAAiB,CAAC,CAAC;IAClC,cAAc,EAAE,CAAC,CAAC;IAClB,YAAY,EAAE,OAAO,CAAC;CACvB;AAED,wBAAgB,WAAW,CAAC,CAAC,EAC3B,KAAK,EAAE,CAAC,EACR,OAAO,GAAE,kBAAuB,GAC/B,iBAAiB,CAAC,CAAC,CAAC,CAoBtB"}

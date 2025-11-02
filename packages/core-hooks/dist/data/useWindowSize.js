@@ -1,0 +1,53 @@
+import { useState, useEffect } from 'react';
+const DEFAULT_BREAKPOINTS = {
+    mobile: 640,
+    tablet: 768,
+    desktop: 1024,
+};
+export function useWindowSize(options = {}) {
+    const { debounceDelay = 150, breakpoints = DEFAULT_BREAKPOINTS } = options;
+    const [windowSize, setWindowSize] = useState({
+        width: typeof window !== 'undefined' ? window.innerWidth : 0,
+        height: typeof window !== 'undefined' ? window.innerHeight : 0,
+    });
+    useEffect(() => {
+        if (typeof window === 'undefined')
+            return;
+        let timeoutId;
+        const handleResize = () => {
+            clearTimeout(timeoutId);
+            timeoutId = setTimeout(() => {
+                setWindowSize({
+                    width: window.innerWidth,
+                    height: window.innerHeight,
+                });
+            }, debounceDelay);
+        };
+        window.addEventListener('resize', handleResize);
+        // Initial call
+        handleResize();
+        return () => {
+            clearTimeout(timeoutId);
+            window.removeEventListener('resize', handleResize);
+        };
+    }, [debounceDelay]);
+    const getBreakpoint = (width) => {
+        if (width < breakpoints.mobile)
+            return 'mobile';
+        if (width < breakpoints.tablet)
+            return 'tablet';
+        if (width < breakpoints.desktop)
+            return 'desktop';
+        return 'wide';
+    };
+    const breakpoint = getBreakpoint(windowSize.width);
+    return {
+        width: windowSize.width,
+        height: windowSize.height,
+        breakpoint,
+        isMobile: breakpoint === 'mobile',
+        isTablet: breakpoint === 'tablet',
+        isDesktop: breakpoint === 'desktop',
+        isWide: breakpoint === 'wide',
+    };
+}
